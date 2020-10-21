@@ -21,7 +21,7 @@ class App extends Component {
           Click
         </button>
         {this.state.showParagraph ? (
-          <p>
+          <p id="para">
             Hello, I've learnt to use the full-stack evaluation tool. This makes
             me so happy
           </p>
