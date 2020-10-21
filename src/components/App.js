@@ -16,7 +16,6 @@ class App extends Component {
   render() {
     return (
       <div id="main">
-        {/* Do not remove this main div!! */}
         <button id="click" onClick={this.handleClick}>
           Click
         </button>
