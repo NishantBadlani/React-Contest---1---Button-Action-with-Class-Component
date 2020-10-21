@@ -17,7 +17,7 @@ class App extends Component {
     return (
       <div id="main">
         {/* Do not remove this main div!! */}
-        <button id="click" onClick={handleClick}>
+        <button id="click" onClick={this.handleClick}>
           Click
         </button>
         {this.state.showParagraph ? (
