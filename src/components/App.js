@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   handleClick = () => {
-    this.setState({ showParagraph: !this.state.showParagraph });
+    this.setState({ showParagraph: true });
   };
 
   render() {
