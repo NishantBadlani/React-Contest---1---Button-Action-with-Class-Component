@@ -9,14 +9,14 @@ class App extends Component {
     };
   }
 
-  handleClick = (obj) => {
-    obj.setState({showParagraph: true});
+  handleClick() {
+    this.setState({showParagraph: true});
   };
 
   render() {
     return (
       <div id="main">
-        <button id="click" onClick={this.handleClick(this)}>
+        <button id="click" onClick={this.handleClick.call(this)}>
           Click
         </button>
         {this.state.showParagraph ? (<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>) : null}
