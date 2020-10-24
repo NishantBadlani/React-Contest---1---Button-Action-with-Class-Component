@@ -11,15 +11,23 @@ class App extends Component {
 
   handleClick() {
     this.setState({showParagraph: true});
-  };
+  }
 
   render() {
     return (
       <div id="main">
-        <button id="click" onClick={this.handleClick.call(this)}>
+        <button
+          id="click"
+          onClick={(function (object) {
+            function clickHandler() {
+              object.handleClick();
+            }
+            return clickHandler;
+          })(this)}
+        >
           Click
         </button>
-        {this.state.showParagraph ? (<p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>) : null}
+        {this.state.showParagraph ? <p id="para">Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p> : null}
       </div>
     );
   }
